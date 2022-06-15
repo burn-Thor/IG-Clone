@@ -1,13 +1,15 @@
+import CatBreeds from "../components/CatBreeds";
 import { Content, Description } from "../css/App.styled";
 
-const About = () => {
+const Breeds = () => {
   return (
     <Content>
       <Description>
-        <p>About</p>
+        <p>Breeds</p>
       </Description>
+      <CatBreeds />
     </Content>
   );
 };
 
-export default About;
+export default Breeds;

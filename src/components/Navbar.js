@@ -7,8 +7,8 @@ const NavBar = () => {
       <Link to="/">
         <NavbarItems>Home</NavbarItems>
       </Link>
-      <Link to="/about">
-        <NavbarItems>About</NavbarItems>
+      <Link to="/breeds">
+        <NavbarItems>Breeds</NavbarItems>
       </Link>
       <Link to="/contact">
         <NavbarItems>Contact</NavbarItems>
