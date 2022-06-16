@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import CatsInfo from "../components/CatsInfo";
 import { Content, Description } from "../css/App.styled";
-import CatInfo from "../components/CatsInfo";
+
 
 const Home = () => {
   const [catsInformation, setCatsinformation] = useState([]);
@@ -29,6 +30,7 @@ const Home = () => {
   return (
     <div className="App">
       {error && <p>{error}</p>}
+<<<<<<< HEAD
       <Content>
         {catsInformation.map((cats) => (
           <items className="items" key={cats.id}>
@@ -42,6 +44,21 @@ const Home = () => {
           <p>Home</p>
         </Description>
       </Content>
+=======
+    <Content>
+      {catsInformation.map((cats) => (
+        <items className="items" key={cats.id}>
+          <h3>{cats.name}</h3>
+          <h3>{cats.origin}</h3>
+          <img src={cats.url} alt="cats" />
+        </items>
+      ))}
+      <Description>
+        <p>Home</p>
+      </Description>
+      <CatsInfo/>
+    </Content>
+>>>>>>> 708b0b1a8c7c44392884e0efbe9a6a431d103287
     </div>
   );
 };
