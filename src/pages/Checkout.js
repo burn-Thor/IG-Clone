@@ -4,7 +4,7 @@ const Cats = () => {
   return (
     <Content>
       <Description>
-        <p>Cats</p>
+        <p>Checkout</p>
       </Description>
     </Content>
   );

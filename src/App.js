@@ -9,9 +9,9 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Breeds from "./pages/Breeds";
 import Benagls from "./pages/Bengals";
+import Checkout from "./pages/Checkout";
 // style
 import { TheApp } from "./css/App.styled";
-import Cats from "./pages/Cats";
 
 // App
 const App = () => {
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/Breeds" element={<Breeds />} />
           <Route path="/Bengals" element={<Benagls />} />
-          <Route path="/Cats" element={<Cats />} />
+          <Route path="/Checkout" element={<Checkout />} />
         </Routes>{" "}
         <FooterBanner />
       </BrowserRouter>

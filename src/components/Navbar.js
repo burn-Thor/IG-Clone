@@ -13,8 +13,8 @@ const NavBar = () => {
       <Link to="/bengals">
         <NavbarItems>Bengals</NavbarItems>
       </Link>
-      <Link to="/cats">
-        <NavbarItems>Cats</NavbarItems>
+      <Link to="/checkout">
+        <NavbarItems>Checkout</NavbarItems>
       </Link>
     </NavbarContainer>
   );
