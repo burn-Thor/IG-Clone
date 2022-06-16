@@ -12,6 +12,7 @@ import Benagls from "./pages/Bengals";
 import Checkout from "./pages/Checkout";
 // style
 import { TheApp } from "./css/App.styled";
+import About from "./pages/About";
 
 // App
 const App = () => {
@@ -23,9 +24,10 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
           <Route path="/Breeds" element={<Breeds />} />
           <Route path="/Bengals" element={<Benagls />} />
-          <Route path="/Contact" element={<Checkout />} />
+          <Route path="/Checkout" element={<Checkout />} />
         </Routes>
         <FooterBanner />
       </BrowserRouter>

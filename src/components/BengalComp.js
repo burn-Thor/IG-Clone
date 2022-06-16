@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 //
 import { BengalText, BengalFlex, EachBengal } from "../css/Bengal.styled";
-import BengalPic from "./BengalPics";
+
 //
 import aryeh1 from "../images/Aryeh1.JPG";
 import aryeh2 from "../images/Aryeh2.JPG";
@@ -15,6 +15,9 @@ import nuka1 from "../images/Nuka1.JPG";
 import nuka2 from "../images/Nuka2.JPG";
 import nuka3 from "../images/Nuka3.JPG";
 import nuka4 from "../images/Nuka4.JPG";
+//
+import { faker } from "@faker-js/faker";
+import BuyBengals from "./BuyBengals";
 //
 const BengalComp = () => {
   // useState animal
@@ -57,7 +60,6 @@ const BengalComp = () => {
       <div>
         {cats.map((cat) => (
           <div key={cat.id}>
-            {/* <img src={cat.image} alt="image" /> */}
             <BengalText>
               <h1>{cat.name}</h1>
               <p>{cat.temperament}</p>
@@ -66,56 +68,7 @@ const BengalComp = () => {
           </div>
         ))}
       </div>
-      <BengalFlex>
-        <EachBengal>
-          <BengalPic bengImg={aryeh1} bengText="Aryeh" />
-          <b>Aryeh Looking down at humans</b>
-        </EachBengal>
-        <EachBengal>
-          <BengalPic bengImg={aryeh2} bengText="Aryeh" />
-          <b>Aryeh Lounging</b>
-        </EachBengal>
-        <EachBengal>
-          <BengalPic bengImg={aryeh3} bengText="Aryeh" />
-          <b>Aryeh Sleeping</b>
-        </EachBengal>
-        <EachBengal>
-          <BengalPic bengImg={aryeh4} bengText="Aryeh" />
-          <b>Aryeh Attacking a Tree</b>
-        </EachBengal>
-        <EachBengal>
-          <BengalPic bengImg={mira1} bengText="Mira" />
-          <b>Samira Up High</b>
-        </EachBengal>
-        <EachBengal>
-          <BengalPic bengImg={mira2} bengText="Mira" />
-          <b>Samira Posing</b>
-        </EachBengal>
-        <EachBengal>
-          <BengalPic bengImg={mira3} bengText="Mira" />
-          <b>Samira Spotted a Fly</b>
-        </EachBengal>
-        <EachBengal>
-          <BengalPic bengImg={mira4} bengText="Mira" />
-          <b>Samira Playing</b>
-        </EachBengal>
-        <EachBengal>
-          <BengalPic bengImg={nuka1} bengText="Pets" />
-          <b>Free Husky with every Bengal</b>
-        </EachBengal>
-        <EachBengal>
-          <BengalPic bengImg={nuka2} bengText="Pets" />
-          <b>Free Husky with every Bengal</b>
-        </EachBengal>
-        <EachBengal>
-          <BengalPic bengImg={nuka3} bengText="Pets" />
-          <b>Free Husky with every Bengal</b>
-        </EachBengal>
-        <EachBengal>
-          <BengalPic bengImg={nuka4} bengText="Pets" />
-          <b>Free Husky with every Bengal</b>
-        </EachBengal>
-      </BengalFlex>
+      <BuyBengals />
     </div>
   );
 };

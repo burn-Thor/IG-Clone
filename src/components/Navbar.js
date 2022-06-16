@@ -29,7 +29,7 @@ const NavBar = () => {
               <NavLink to="/bengals">Bengals</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/checkout">Checkout</NavLink>
             </NavItem>
           </NavMenu>
 
@@ -41,7 +41,6 @@ const NavBar = () => {
         </NavbarContainer>
       </Nav>
     </div>
-
   );
 };
 

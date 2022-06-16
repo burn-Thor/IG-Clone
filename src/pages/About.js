@@ -1,13 +1,15 @@
+import BuyBengals from "../components/BuyBengals";
 import { Content, Description } from "../css/App.styled";
 
-const Checkout = () => {
+const About = () => {
   return (
     <Content>
       <Description>
-        <p>Checkout</p>
+        <p>About</p>
       </Description>
+      <BuyBengals />
     </Content>
   );
 };
 
-export default Checkout;
+export default About;

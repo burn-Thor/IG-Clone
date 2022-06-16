@@ -25,4 +25,6 @@ export const BenaglImgage = styled.img`
 
 export const EachBengal = styled.div`
   margin: 20px;
+  text-align: left;
+  padding-left: 20px;
 `;

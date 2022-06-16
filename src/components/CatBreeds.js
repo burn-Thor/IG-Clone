@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 //
-import { CatBreedsStyle } from "../css/Breeds.styled";
+import { CatBreedFlex, EachBread } from "../css/Breeds.styled";
 //
 const CatBreeds = () => {
   // useState animal
@@ -38,13 +38,14 @@ const CatBreeds = () => {
       {/* error */}
       {error && <p>{error}</p>}
       {/* Map Array */}
-      <CatBreedsStyle>
+      <CatBreedFlex>
         {cats.map((cat) => (
-          <div key={cat.id}>
+          <EachBread key={cat.id}>
+            <b>{cat.name}</b>
             <p>{cat.temperament}</p>
-          </div>
+          </EachBread>
         ))}
-      </CatBreedsStyle>
+      </CatBreedFlex>
     </div>
   );
 };
