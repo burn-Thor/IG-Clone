@@ -11,6 +11,10 @@ import mira1 from "../images/Mira1.JPG";
 import mira2 from "../images/Mira2.JPG";
 import mira3 from "../images/Mira3.JPG";
 import mira4 from "../images/Mira4.JPG";
+import nuka1 from "../images/Nuka1.JPG";
+import nuka2 from "../images/Nuka2.JPG";
+import nuka3 from "../images/Nuka3.JPG";
+import nuka4 from "../images/Nuka4.JPG";
 //
 const BengalComp = () => {
   // useState animal
@@ -81,20 +85,36 @@ const BengalComp = () => {
           <b>Aryeh Attacking a Tree</b>
         </EachBengal>
         <EachBengal>
-          <BengalPic bengImg={mira1} bengText="Aryeh" />
+          <BengalPic bengImg={mira1} bengText="Mira" />
           <b>Samira Up High</b>
         </EachBengal>
         <EachBengal>
-          <BengalPic bengImg={mira2} bengText="Aryeh" />
+          <BengalPic bengImg={mira2} bengText="Mira" />
           <b>Samira Posing</b>
         </EachBengal>
         <EachBengal>
-          <BengalPic bengImg={mira3} bengText="Aryeh" />
+          <BengalPic bengImg={mira3} bengText="Mira" />
           <b>Samira Spotted a Fly</b>
         </EachBengal>
         <EachBengal>
-          <BengalPic bengImg={mira4} bengText="Aryeh" />
+          <BengalPic bengImg={mira4} bengText="Mira" />
           <b>Samira Playing</b>
+        </EachBengal>
+        <EachBengal>
+          <BengalPic bengImg={nuka1} bengText="Pets" />
+          <b>Free Husky with every Bengal</b>
+        </EachBengal>
+        <EachBengal>
+          <BengalPic bengImg={nuka2} bengText="Pets" />
+          <b>Free Husky with every Bengal</b>
+        </EachBengal>
+        <EachBengal>
+          <BengalPic bengImg={nuka3} bengText="Pets" />
+          <b>Free Husky with every Bengal</b>
+        </EachBengal>
+        <EachBengal>
+          <BengalPic bengImg={nuka4} bengText="Pets" />
+          <b>Free Husky with every Bengal</b>
         </EachBengal>
       </BengalFlex>
     </div>
