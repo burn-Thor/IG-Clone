@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Content, Description } from "../css/App.styled";
+import { Content } from "../css/App.styled";
 
 const CatsInfo = () => {
   const [infomationCats, setInformationCats] = useState([]);
@@ -33,9 +33,6 @@ const CatsInfo = () => {
             <h3>{cats.origin}</h3>
           </items>
         ))}
-        <Description>
-          <p>Home</p>
-        </Description>
       </Content>
     </div>
   );
