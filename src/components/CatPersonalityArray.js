@@ -33,7 +33,7 @@ const CatPersonArray = () => {
   }, []);
   //
 
-  const ourArray = cats.map((cat) => cat.temperment);
+  const ourArray = cats.map((cat) => cat.id);
   console.log(ourArray);
 
   //   const ourArray2 = (maptemperament, id) => {
