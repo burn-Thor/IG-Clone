@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import CatsInfo from "../components/CatsInfo";
 import { TheApp, Content, Description } from "../css/App.styled";
-import { CatImgage, CatFlex } from "../css/Home.styled";
+import { CatImgage, CatFlex, EachCat } from "../css/Home.styled";
 
 const Home = () => {
   const [catsInformation, setCatsinformation] = useState([]);
@@ -36,13 +36,12 @@ const Home = () => {
           <p>Home</p>
         </Description>
         <CatFlex>
-          {catsInformation.map((cats) => (
-            <items className="items" key={cats.id}>
-              <h3>{cats.name}</h3>
-              <h3>{cats.origin}</h3>
-              <CatImgage src={cats.url} alt="cats" />
-            </items>
-          ))}
+            {catsInformation.map((cats) => (
+              <EachCat key={cats.id}>
+                <CatImgage src={cats.url} alt="cats" />
+                <h3>A Cat</h3>
+              </EachCat>
+            ))}
         </CatFlex>
         <CatsInfo />
       </Content>

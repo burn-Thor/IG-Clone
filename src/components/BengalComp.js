@@ -67,7 +67,6 @@ const BengalComp = () => {
         ))}
       </div>
       <BengalFlex>
-        {" "}
         <EachBengal>
           <BengalPic bengImg={aryeh1} bengText="Aryeh" />
           <b>Aryeh Looking down at humans</b>
