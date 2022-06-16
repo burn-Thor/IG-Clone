@@ -1,5 +1,4 @@
 import {
-  Footer,
   FooterContainer,
   FooterWrap,
   FooterLinksContainer,

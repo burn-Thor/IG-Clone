@@ -2,7 +2,7 @@ import {
   Nav,
   NavbarContainer,
   NavLogo,
-  MobileIcon,
+  // MobileIcon,
   NavMenu,
   NavItem,
   NavLink,
@@ -41,20 +41,7 @@ const NavBar = () => {
         </NavbarContainer>
       </Nav>
     </div>
-    // <NavbarContainer>
-    //   <Link to="/">
-    //     <NavbarItems>Home</NavbarItems>
-    //   </Link>
-    //   <Link to="/breeds">
-    //     <NavbarItems>Breeds</NavbarItems>
-    //   </Link>
-    //   <Link to="/bengals">
-    //     <NavbarItems>Bengals</NavbarItems>
-    //   </Link>
-    //   <Link to="/checkout">
-    //     <NavbarItems>Checkout</NavbarItems>
-    //   </Link>
-    // </NavbarContainer>
+
   );
 };
 
