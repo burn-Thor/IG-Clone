@@ -1,4 +1,4 @@
-import CatBreeds from "../components/CatBreeds";
+// import CatBreeds from "../components/CatBreeds";
 import CatPersonArray from "../components/CatPersonalityArray";
 import { Content, Description } from "../css/App.styled";
 
@@ -9,7 +9,7 @@ const Breeds = () => {
         <p>Breeds</p>
       </Description>
       {/* cat breeds component */}
-      <CatBreeds />
+      {/* <CatBreeds /> */}
       <CatPersonArray />
     </Content>
   );

@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import { TheApp, Content, Description } from "../css/App.styled";
 import { CatImgage, CatFlex, EachCat } from "../css/Home.styled";
+import { faker } from "@faker-js/faker";
 
 const Home = () => {
   const [catsInformation, setCatsinformation] = useState([]);
   const [error, setError] = useState(null);
-  // kat use state
-  // useState animal
-  const [cats, setCats] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,7 +26,6 @@ const Home = () => {
     };
     fetchData();
   }, []);
-  
 
   return (
     <TheApp>
@@ -41,8 +38,8 @@ const Home = () => {
           {catsInformation.map((cats) => (
             <EachCat key={cats.id}>
               <CatImgage src={cats.url} alt="cats" />
-              <h3>A Cat</h3>
-              <p>{cats.temperament}</p>
+              <h3>{faker.name.findName()}</h3>
+              <p>{faker.word.adjective()}</p>
             </EachCat>
           ))}
         </CatFlex>

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 //
-// import { CatBreedsStyle, EachBread, BreedText } from "../css/Breeds.styled";
+import { CatBreedsStyle } from "../css/Breeds.styled";
 //
 const CatPersonArray = () => {
   // useState animal
   const [cats, setCats] = useState([]);
   // error handling useState
-  //   const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
 
   // use effect function from react
   // fetch function goes inside so only handle fetch request once
@@ -25,7 +25,7 @@ const CatPersonArray = () => {
         console.log(data);
       } catch (error) {
         console.log(error);
-        // setError("Could not fetch the data");
+        setError("Could not fetch the data");
       }
     };
 
@@ -33,33 +33,27 @@ const CatPersonArray = () => {
   }, []);
   //
 
-  const ourArray = cats.map((cat) => cat.id);
-  console.log(ourArray);
+  //   const ourArray = cats.map((cat) => cat.id.temperment);
+  //   console.log(ourArray);
+  let PersonalityArray = [];
 
-  //   const ourArray2 = (maptemperament, id) => {
-  //     const key = key;
-  //     const temperament = temperament;
-  //   };
-
-  //   {cats.map((cat) => (
-  //     <div key={cat.id}>
-  //       <p>{cat.temperament}</p>
-  //     </div>
-  //   ))}
-  //   each list should id and temperment
+  //   const tada = () => {cats.map(( temperament, id)=>(,
+  //     temperament = cats.temperament,
+  //   ))};
 
   return (
     <div className="App">
       {/* error */}
-      {/* {error && <p>{error}</p>} */}
+      {error && <p>{error}</p>}
       {/* Map Array */}
-      {/* <CatBreedsStyle>
+      <CatBreedsStyle>
         {cats.map((cat) => (
           <div key={cat.id}>
-            <p>{cat.temperament}</p>
+            {(PersonalityArray = cat.temperament)}
+            {PersonalityArray}
           </div>
         ))}
-      </CatBreedsStyle>  */}
+      </CatBreedsStyle>
     </div>
   );
 };
