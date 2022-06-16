@@ -10,8 +10,11 @@ const NavBar = () => {
       <Link to="/breeds">
         <NavbarItems>Breeds</NavbarItems>
       </Link>
-      <Link to="/contact">
-        <NavbarItems>Contact</NavbarItems>
+      <Link to="/bengals">
+        <NavbarItems>Bengals</NavbarItems>
+      </Link>
+      <Link to="/cats">
+        <NavbarItems>Cats</NavbarItems>
       </Link>
     </NavbarContainer>
   );

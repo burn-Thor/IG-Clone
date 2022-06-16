@@ -7,10 +7,11 @@ import FooterBanner from "./components/Footer";
 import Navbar from "./components/Navbar";
 // pages
 import Home from "./pages/Home";
-import Contact from "./pages/Contact";
 import Breeds from "./pages/Breeds";
+import Benagls from "./pages/Bengals";
 // style
 import { TheApp } from "./css/App.styled";
+import Cats from "./pages/Cats";
 
 // App
 const App = () => {
@@ -23,7 +24,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Breeds" element={<Breeds />} />
-          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Bengals" element={<Benagls />} />
+          <Route path="/Cats" element={<Cats />} />
         </Routes>{" "}
         <FooterBanner />
       </BrowserRouter>

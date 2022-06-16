@@ -9,7 +9,7 @@ export const Content = styled.div`
   /* padding: 10px; */
   background-color: #f2da9d;
   text-align: center;
-  min-height: 500px;
+  min-height: 700px;
 `;
 
 export const Description = styled.div`

@@ -1,13 +1,14 @@
+// import CatPics from "../components/TheCats";
 import { Content, Description } from "../css/App.styled";
 
-const Contact = () => {
+const Benagls = () => {
   return (
     <Content>
       <Description>
-        <p>Contact</p>
+        <p>Benagls</p>
       </Description>
     </Content>
   );
 };
 
-export default Contact;
+export default Benagls;
