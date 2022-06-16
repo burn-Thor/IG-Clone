@@ -39,6 +39,7 @@ const Home = () => {
             <EachCat key={cats.id}>
               <CatImgage src={cats.url} alt="cats" />
               <h3>{faker.name.findName()}</h3>
+              <p>{faker.finance.amount(100, 200, 2, "£")}</p>
               <p>{faker.word.adjective()}</p>
             </EachCat>
           ))}
