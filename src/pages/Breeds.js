@@ -7,6 +7,7 @@ const Breeds = () => {
       <Description>
         <p>Breeds</p>
       </Description>
+      {/* cat breeds component */}
       <CatBreeds />
     </Content>
   );
