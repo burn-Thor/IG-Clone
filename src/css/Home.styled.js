@@ -19,4 +19,5 @@ export const CatImgage = styled.img`
 
 export const EachCat = styled.div`
   margin: 20px;
+  text-align: left;
 `;
