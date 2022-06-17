@@ -41,6 +41,7 @@ const Home = () => {
               <h3>{faker.name.findName()}</h3>
               <p>{faker.finance.amount(100, 200, 2, "£")}</p>
               <p>{faker.word.adjective()}</p>
+              <button>Click</button>
             </EachCat>
           ))}
         </CatFlex>

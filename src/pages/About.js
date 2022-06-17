@@ -1,12 +1,14 @@
-import { Content, Description } from "../css/App.styled";
+import { TheApp, Content, Description } from "../css/App.styled";
 
 const About = () => {
   return (
-    <Content>
-      <Description>
-        <p>About</p>
-      </Description>
-    </Content>
+    <TheApp>
+      <Content>
+        <Description>
+          <p>About</p>
+        </Description>
+      </Content>
+    </TheApp>
   );
 };
 
