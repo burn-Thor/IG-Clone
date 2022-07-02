@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>burnThor</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+</head>
+<body>
+    
+    <!-- canvas element to draw the fire -->
+    <canvas id = "canvas"> </canvas>
+    
+    <script>
+
+    // defining constants for canvas size and zoom
+        let width = 200, height = 120, pixelSize = 3;
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        canvas.width = width * pixelSize;
+        canvas.height = height * pixelSize;
+
+        // fire array for each pixel of the canvas - elements of the array will contain value from 0 - 355, that will identify the intensity of brightness of each pixel
+        let fire = new Array(width * height).fill(150);
+
+
+        //define get & set function
+
+        function get(x, y) {
+            return fire[y * width + x] || 0;
+        }
+
+        function set(x, y, v){
+            fire[y * width + x] = v;
+        }
+
+    // HTML canvas does not have native support for pixel level operations, so emulate drawing pixel by filling rectangle   
+        function pixel(x, y, color) {
+            ctx.fillStyle = color;
+            ctx.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
+        }
+
+    // color function with gradient defined going through site's colour scheme, using chroma for ease
+        let gradient = chroma.scale(['#BDEFBF', '#BDEFBF', '#43BCCD', '#9F9493', '#533A71']).domain([0, 10, 15, 30, 100]);
+        function color(color){
+            return gradient(color * 100.0 / 255).toString();
+        }
+        // test without .toString when fished ***************
+
+    // Final step, add text/image to canvas at the top of the flame
+    function drawText() {
+        ctx.textAlign = 'center'
+        ctx.font = (10 * pixelSize) + 'px Arial'
+        ctx.fillStyle = '#345995'
+        ctx.fillText("Click to see my portfolio", width * pixelSize / 2, height * pixelSize / 2.5)
+    }
+
+
+
+    //the critical function - schedule to be repeated just before browser repeats the screen - 2 parts
+        function frame() {
+    //1st part initialises the fire, starts from the buttom and fills bottom row of the canvas with random colours.Like real life the colours populate randomly, never knowing which part will be more active
+            for(let x = 0; x < width; x++) {
+                set(x, height - 1, Math.floor(Math.random() * 355));
+            }
+    //2nd part simulates how the fire burns - following a model that calculates brightness of a pixel based on the pixels directly below, taking 3 pixels from the row below and 1 pixel two rows below. The vision co-efficient determines how brightness fades up/down 
+            for (let y = 0; y < height - 1; y++) {
+                for(let x = 0; x < width; x++) {
+                    let c = (get(x - 1, y + 1) + get(x, y + 1) + get(x + 1, y + 1) + get(x, y + 2)) / 4.1;
+                    set(x, y, c);
+                    pixel(x, y, color(c));
+
+                }
+            }
+            drawText();
+            window.requestAnimationFrame(frame);
+        }
+        window.requestAnimationFrame(frame);
+
+
+
+
+    </script>
+    
+    
+</body>
+</html>
